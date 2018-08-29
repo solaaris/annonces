@@ -28,7 +28,7 @@ export class CreateAnnonceComponent implements OnInit {
 
   }
 
-    getValue (Number: number)
+    getValue (Number: number):number
     {
       return Number ;
 
