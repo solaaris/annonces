@@ -12,7 +12,7 @@ module.exports = function (config) {
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma'),
       require('karma-junit-reporter'),
-      require('pupeeteer')
+      require('puppeteer')
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
