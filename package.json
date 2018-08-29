@@ -45,7 +45,7 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2",
-    "pupeeteer" : "~1.7.0",
+    "puppeteer" : "~1.7.0",
     "karma-junit-reporter": "~1.2.0"
     
   }
