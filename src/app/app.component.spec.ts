@@ -1,12 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { AnnonceService } from './services/annonce.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NgForm } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,NavbarComponent , NgForm
       ],
+      providers: [AnnonceService],
+      imports : [ RouterTestingModule],
     }).compileComponents();
+
+
+
   }));
   it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -22,6 +32,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to annonces!');
+    expect(compiled.querySelector('h1').textContent).toContain('1');
   }));
 });

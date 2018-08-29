@@ -1,0 +1,22 @@
+<div class="card-group">
+
+  <li *ngFor='let a of annonces' class="list-group-item">
+  <div class="card box rotate" style="width: 18rem;">
+    <img class="card-img-top" src="https://loremflickr.com/125/125" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ a.titre }} </h5>
+      <p class="card-text"> {{ a.prix | currency:'EUR' }} ({{a.date | date:'shortDate'}})</p>
+    </div>
+  
+    <div class="card-body">
+      <a [routerLink]="['/annonce', a.id]"  class="btn btn-primary btn-lg btn-block"> Afficher details</a>
+    
+
+
+    </div>
+   
+  </div>
+</div>
+
+
+

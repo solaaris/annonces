@@ -1,0 +1,21 @@
+<div class="row justify-content-md-center align-items-center" >
+<form #createAnnonceForm="ngForm" (ngSubmit)="save()" class="col-sm-6 col-sm-offset-3">
+  <div class="form-group">
+    <label for="titre">Titre de l'annonce</label>
+    <input name="titre" [(ngModel)]="titre" #titreL="ngModel" type="text" class="form-control" id="titre" placeholder="Titre"
+      required />
+  </div>
+
+  <div class="form-group">
+    <label for="titre">Texte de l'annonce</label>
+    <textarea name="texte" [(ngModel)]="texte" #textL="ngModel" class="form-control" id="texte" placeholder="texte"  rows="10" required ></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="prix">Prix</label>
+    <input name="prix" [(ngModel)]="prix" #prixL="ngModel" type="text" class="form-control" id="prix" placeholder="Prix" required
+    />
+  </div>
+
+  <button type="submit" [disabled]='!createAnnonceForm.valid' class="btn btn-primary" style="color: #337ab7; background-color: #e3f2fd;">Submit</button>
+</form></div>
